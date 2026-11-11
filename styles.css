@@ -337,3 +337,8 @@ html:has(.video-dialog[open]){overflow:hidden}
 @keyframes headline-type{from{visibility:hidden}to{visibility:visible}}
 @media(prefers-reduced-motion:reduce){.typewriter-char{animation:none}}
 @media print{.typewriter-char{animation:none}}
+
+/* Temporary text wordmark until the final brand logo is supplied. */
+.wordmark{gap:0;font-size:24px;font-weight:400;letter-spacing:-.035em;line-height:1.2}
+.wordmark strong{font-weight:700}
+@media(max-width:700px){.wordmark{font-size:22px}}
