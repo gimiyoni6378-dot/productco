@@ -1,4 +1,4 @@
-import { contactConfig } from './contact-config.js';
+import { contactConfig } from './contact-config.js?v=20261111-ready';
 
 const inquiry = document.getElementById('inquiry-dialog');
 const form = document.getElementById('inquiry-form');

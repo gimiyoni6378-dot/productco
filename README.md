@@ -34,4 +34,4 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 ## 로컬 확인
 저장소에서 `python -m http.server 8765` 실행 후 `http://localhost:8765` 접속.
 
-문의 양식은 구현되어 있으며 실제 접수는 설정이 완료된 뒤 활성화됩니다. Formspree 무료 플랜의 접수량·보관 제한과 운영자/개발자별 작업은 [문의 접수 연결 안내](docs/CONTACT_SETUP.md)에 정리했습니다.
+문의 양식을 활성화했습니다. 공개 개인정보 문의 이메일은 rkdtls789@gmail.com이며 보관 기간은 접수일로부터 30일입니다. Formspree 테스트 접수는 성공했고, 운영자 Gmail의 실제 도착 확인은 남아 있습니다. Formspree 무료 플랜의 접수량·보관 제한과 운영자/개발자별 작업은 [문의 접수 연결 안내](docs/CONTACT_SETUP.md)에 정리했습니다.

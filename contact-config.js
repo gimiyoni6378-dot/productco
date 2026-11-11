@@ -3,6 +3,6 @@
 // Complete the privacy notice before enabling real submissions.
 export const contactConfig = Object.freeze({
   endpoint: "https://formspree.io/f/xnpdqjov",
-  privacyContact: "",
-  retentionPolicy: "",
+  privacyContact: "rkdtls789@gmail.com",
+  retentionPolicy: "접수일로부터 30일 보관 후 삭제",
 });
