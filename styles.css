@@ -365,3 +365,73 @@ html:has(.video-dialog[open]){overflow:hidden}
   .faq summary{font-size:16px}
   .faq details{padding:20px 0}
 }
+
+/* Editorial refinement: short phrases, readable measures and stable Korean wrapping. */
+.heading-line{display:block}
+.section-nav{padding-block:12px;gap:8px 36px}
+.section-nav a{font-size:13px}
+.intro h2,.services h2,.process h2,.section-heading h2,.faq h2{font-family:"Noto Sans KR",sans-serif;font-size:clamp(30px,3.5vw,48px);line-height:1.5;letter-spacing:-.055em;font-weight:400}
+h2,h3,summary{word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+p{word-break:keep-all;overflow-wrap:normal;text-wrap:pretty}
+.intro-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8%;align-items:center}
+.intro-text{max-width:46ch}
+.intro-text p{line-height:2}
+.intro-text p+p{margin-top:20px}
+.hero-copy{max-width:54ch}
+.hero-copy span+span{margin-top:6px}
+.section-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr);gap:48px;align-items:end}
+.section-note{margin:0 0 6px;line-height:1.95}
+.process-heading{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:0 8%;margin-bottom:44px}
+.process-lead{max-width:38ch}
+.step p{font-size:15px;line-height:1.95}
+.steps .step{padding-inline:24px}
+.steps .step:first-child{padding-left:0}
+.steps .step:last-child{padding-right:0}
+.services-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8%;margin-bottom:44px}
+.services-lead{max-width:42ch}
+.service-item{grid-template-columns:40px minmax(180px,.85fr) minmax(0,1.25fr);gap:12px 28px;padding-block:32px}
+.service-item h3{font-size:19px;line-height:1.7;text-wrap:balance}
+.service-list .service-summary{font-size:16px;line-height:1.95;max-width:48ch}
+.service-details{grid-column:3;margin-top:6px;gap:8px 18px}
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8%}
+.faq h2{font-size:clamp(28px,3vw,40px);margin:0}
+.faq details{padding-block:23px}
+.faq summary{font-size:16px;line-height:1.8;text-wrap:pretty}
+.faq details p{font-size:15px;line-height:1.95}
+.contact h2{line-height:1.5}
+.contact p:not(.eyebrow){font-size:15px;line-height:1.95;margin-top:24px}
+@media(min-width:701px) and (max-width:1100px){
+  .intro-grid,.services-head{gap:6%}
+  .section-heading{gap:32px;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+  .service-item{grid-template-columns:32px minmax(165px,.85fr) minmax(0,1.15fr);gap:12px 20px}
+  .faq{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:700px){
+  .section-nav{padding:12px 7vw;justify-content:space-between;gap:6px 12px}
+  .section-nav a{font-size:12px}
+  .intro h2,.services h2,.process h2,.section-heading h2{font-size:clamp(28px,7.4vw,36px);line-height:1.5}
+  .intro-grid,.services-head,.section-heading,.process-heading{display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+  .intro-text{max-width:none}
+  .intro-text p,.hero-copy{font-size:15px;line-height:1.95}
+  .hero-copy span+span{margin-top:8px}
+  .section-heading{margin-bottom:30px}
+  .section-note{font-size:15px;margin:0}
+  .process-heading{gap:0;margin-bottom:32px}
+  .process-heading .eyebrow{margin-bottom:24px}
+  .process h2{margin-bottom:20px}
+  .process-lead,.services-lead{font-size:15px;line-height:1.95}
+  .steps .step,.steps .step:first-child,.steps .step:last-child{padding:24px 0}
+  .step p{max-width:42ch}
+  .services-head{margin-bottom:32px}
+  .service-item{grid-template-columns:28px minmax(0,1fr);gap:12px 0;padding-block:28px}
+  .service-item h3{grid-column:2;font-size:18px;text-wrap:pretty}
+  .service-list .service-summary{font-size:15px;grid-column:2}
+  .service-details{grid-column:2;margin-top:4px;gap:8px 16px}
+  .faq{grid-template-columns:minmax(0,1fr);gap:28px}
+  .faq h2{font-size:clamp(28px,7.4vw,36px)}
+  .faq summary{font-size:15px}
+  .faq details{padding-block:20px}
+  .contact h2{font-size:clamp(30px,8vw,43px)}
+  .contact h2 br{display:block}
+  .contact p:not(.eyebrow){font-size:14px;line-height:1.95}
+}
