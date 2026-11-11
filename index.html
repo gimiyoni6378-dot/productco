@@ -2,6 +2,45 @@
 <html lang="ko" data-type="service" data-motion>
 <head>
   <meta charset="utf-8">
+  <script>
+    // Start fresh visits and reloads at the hero, including Safari's restored pages.
+    (() => {
+      const navigation = performance.getEntriesByType('navigation')[0];
+      const isReload = navigation?.type === 'reload';
+      const startAtTop = isReload || !location.hash || location.hash === '#top';
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (!startAtTop) return; // Preserve deliberately shared section links.
+      if (isReload && location.hash) {
+        history.replaceState(history.state, '', location.pathname + location.search);
+      }
+      let interacted = false;
+      const markInteraction = () => { interacted = true; };
+      const interactionEvents = ['touchstart', 'pointerdown', 'wheel', 'keydown'];
+      interactionEvents.forEach(type => addEventListener(type, markInteraction, { passive: true }));
+      const resetScroll = () => {
+        if (interacted) return;
+        const root = document.documentElement;
+        const previous = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        try {
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        } catch {
+          // Older WebViews may only accept auto/smooth.
+          void root.offsetHeight;
+          window.scrollTo(0, 0);
+        }
+        root.style.scrollBehavior = previous;
+      };
+      resetScroll();
+      addEventListener('DOMContentLoaded', resetScroll, { once: true });
+      addEventListener('pageshow', event => {
+        // Only a BFCache return starts a new visit within this document.
+        if (event.persisted) interacted = false;
+        resetScroll();
+        requestAnimationFrame(resetScroll);
+      });
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111111">
   <meta name="page-type" content="service">
