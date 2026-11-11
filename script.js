@@ -84,16 +84,3 @@ dialog.addEventListener("close", () => {
   resetDialog();
   dialogTrigger?.focus({ preventScroll: true });
 });
-
-// 실제 문의 이메일이 정해지면 아래 주소를 입력하세요.
-const CONTACT_EMAIL = "";
-const contactLink = document.getElementById("contact-mail");
-if (CONTACT_EMAIL) {
-  contactLink.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("[93seconds] 프로젝트 문의")}`;
-} else {
-  contactLink.href = "mailto:";
-  contactLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    alert("문의 이메일 주소가 아직 연결되지 않았습니다. 운영 이메일을 정하면 이 버튼에 연결할 수 있습니다.");
-  });
-}

@@ -6,7 +6,8 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 ## 구성
 - `index.html`: 브랜드 소개, 작품, 제작 과정, 서비스, FAQ, 문의
 - `styles.css`: 반응형 디자인과 타이핑 효과
-- `script.js`: 헤드 타이핑, 영상 모달, 문의 연결
+- `script.js`: 헤드 타이핑, 영상 모달
+- `contact.js` / `contact-config.js`: 문의 창과 Formspree 제출 연결
 - `assets/motion/`: 모션 효과
 
 ## 검색을 위한 HTML 구성
@@ -21,7 +22,7 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 도메인을 변경하면 canonical과 Open Graph URL도 함께 갱신해야 합니다.
 
 ## 오픈 전 확인
-1. `script.js`의 `CONTACT_EMAIL`에 실제 문의 이메일 연결
+1. [문의 접수 연결 안내](docs/CONTACT_SETUP.md)를 따라 수신 이메일 인증·공개 개인정보 연락처·보관 기간 설정
 2. 준비 중인 세 작품의 `data-video`에 공개 가능한 영상 URL 입력
 3. 참고 이미지를 실제 작업 이미지로 교체하고 사용 권한 확인
 4. 서비스 설명과 FAQ의 실제 운영 내용 확인
@@ -32,3 +33,5 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 
 ## 로컬 확인
 저장소에서 `python -m http.server 8765` 실행 후 `http://localhost:8765` 접속.
+
+문의 양식은 구현되어 있으며 실제 접수는 설정이 완료된 뒤 활성화됩니다. Formspree 무료 플랜의 접수량·보관 제한과 운영자/개발자별 작업은 [문의 접수 연결 안내](docs/CONTACT_SETUP.md)에 정리했습니다.
