@@ -277,3 +277,47 @@ html:has(.video-dialog[open]){overflow:hidden}
   html{scroll-behavior:auto}
   .video-dialog[open] .dialog-shell{animation:none}
 }
+
+/* Shared project inquiry button — matches the hero heading typography. */
+.project-cta.header-cta,.project-cta.contact-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  min-height:48px;
+  padding:12px 22px;
+  border:1px solid #c4aa88;
+  border-radius:4px;
+  background:#c4aa88;
+  color:#171716;
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:14px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:-.055em;
+  white-space:nowrap;
+  transition:background-color 180ms var(--ease),border-color 180ms var(--ease);
+}
+.project-cta.header-cta span,.project-cta.contact-link span{
+  margin-left:0;
+  color:inherit;
+  font-size:18px;
+  line-height:1;
+}
+@media (hover:hover){
+  .project-cta.header-cta:hover,.project-cta.contact-link:hover{
+    background:#ddc6a8;
+    border-color:#ddc6a8;
+  }
+}
+@media (max-width:700px){
+  .project-cta.header-cta,.project-cta.contact-link{
+    min-height:44px;
+    padding:10px 14px;
+    gap:12px;
+    font-size:12px;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .project-cta.header-cta,.project-cta.contact-link{transition:none}
+}
