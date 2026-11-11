@@ -342,3 +342,26 @@ html:has(.video-dialog[open]){overflow:hidden}
 .wordmark{gap:0;font-size:24px;font-weight:400;letter-spacing:-.035em;line-height:1.2}
 .wordmark strong{font-weight:700}
 @media(max-width:700px){.wordmark{font-size:22px}}
+
+/* Readable content navigation and semantic production steps. */
+.section-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;padding:22px 7vw;border-bottom:1px solid var(--line)}
+.section-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:#4e4c46}
+.section-nav a:hover,.faq a:hover{text-decoration:underline;text-underline-offset:4px}
+.steps{list-style:none;margin:0;padding:0}
+.service-item h3{font-family:"Noto Sans KR",sans-serif;word-break:keep-all}
+.faq{padding-top:90px;padding-bottom:100px;background:#e5e3dc}
+.faq h2{font-size:clamp(28px,3.5vw,44px);font-weight:400;line-height:1.45;letter-spacing:-.055em;margin:0 0 40px}
+.faq-list{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}
+.faq summary{font-size:18px;font-weight:500;line-height:1.7;cursor:pointer;padding-right:12px}
+.faq summary:focus-visible{outline:2px solid #9b7549;outline-offset:5px}
+.faq details p{font-size:16px;line-height:1.95;color:#4e4c46;max-width:76ch;margin:18px 0 0}
+.faq a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){
+  .section-nav{gap:4px 20px;padding:16px 7vw;justify-content:flex-start}
+  .section-nav a{font-size:13px}
+  .faq{padding-top:76px;padding-bottom:76px}
+  .faq h2{margin-bottom:28px}
+  .faq summary{font-size:16px}
+  .faq details{padding:20px 0}
+}

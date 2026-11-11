@@ -89,7 +89,7 @@ dialog.addEventListener("close", () => {
 const CONTACT_EMAIL = "";
 const contactLink = document.getElementById("contact-mail");
 if (CONTACT_EMAIL) {
-  contactLink.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("[시니 스튜디오] 프로젝트 문의")}`;
+  contactLink.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("[93seconds] 프로젝트 문의")}`;
 } else {
   contactLink.href = "mailto:";
   contactLink.addEventListener("click", (event) => {
