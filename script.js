@@ -1,3 +1,25 @@
+// Reveal complete Korean characters once, preserving the headline markup and layout.
+const typingHeading = document.querySelector('[data-typewriter]');
+if (typingHeading && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  typingHeading.setAttribute('aria-label', typingHeading.innerText.replace(/\n/g, ' '));
+  const walker = document.createTreeWalker(typingHeading, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  let characterIndex = 0;
+  nodes.forEach(node => {
+    const fragment = document.createDocumentFragment();
+    Array.from(node.textContent).forEach(character => {
+      const span = document.createElement('span');
+      span.className = 'typewriter-char';
+      span.setAttribute('aria-hidden', 'true');
+      span.style.setProperty('--type-delay', `${350 + characterIndex++ * 65}ms`);
+      span.textContent = character;
+      fragment.append(span);
+    });
+    node.replaceWith(fragment);
+  });
+}
+
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 

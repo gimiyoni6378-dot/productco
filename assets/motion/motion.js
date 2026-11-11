@@ -359,11 +359,11 @@ function enter() {
   // hidden meanwhile, so nothing is seen twice
   Promise.race([document.fonts?.ready ?? Promise.resolve(), new Promise(r => setTimeout(r, 250))]).then(() => {
     if (html.classList.contains('m-enter-done') && !hero.classList.contains('is-entering')) { over = true; return late(); }   // the safety mark won: CSS shows it
-    masks = maskWords(h1);
+    masks = h1.hasAttribute('data-typewriter') ? null : maskWords(h1);
     // .is-entering ends the CSS hold: the words are held by their animations from here, and the
     // picture starts its CSS settle in the same frame
     hero.classList.add('is-entering');
-    const lines = masks ? masks.lines : [[h1]];
+    const lines = h1.hasAttribute('data-typewriter') ? [] : (masks ? masks.lines : [[h1]]);
     const lineStep = Math.min(80, 240 / Math.max(1, lines.length - 1));
     // a word starts wholly below its mask, which reaches .12em under the line: no tops show before it rises
     lines.forEach((ws, k) => ws.forEach(w => anims.push(w.animate(masks
@@ -372,7 +372,7 @@ function enter() {
       { duration: 700, delay: 80 + k * lineStep, easing: EASE, fill: 'both' }))));
     // a line above the h1 (a notice, a pill) comes with its first line; what follows starts as its
     // last line is half way up
-    const after = 80 + (lines.length - 1) * lineStep + 220;
+    const after = 80 + Math.max(0, lines.length - 1) * lineStep + 220;
     let k = 0;
     steps.forEach(el => {
       const above = !!(el.compareDocumentPosition(h1) & Node.DOCUMENT_POSITION_FOLLOWING);
