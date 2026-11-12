@@ -414,6 +414,7 @@ p{word-break:keep-all;overflow-wrap:normal;text-wrap:pretty}
   .intro-text{max-width:none}
   .intro-text p,.hero-copy{font-size:15px;line-height:1.95}
   .hero-copy span+span{margin-top:8px}
+  .hero-copy .hero-copy-break{display:initial}
   .section-heading{margin-bottom:30px}
   .section-note{font-size:15px;margin:0}
   .process-heading{gap:0;margin-bottom:32px}
