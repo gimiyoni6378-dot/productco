@@ -51,17 +51,11 @@ document.querySelectorAll("[data-video]").forEach((card) => {
   if (card.dataset.video) mountWorkPlayer(card);
 
   card.addEventListener("click", () => {
+    if (!card.dataset.video) return;
     const work = card.closest(".work-card");
-    if (work.querySelector(".work-inline-player, .work-video-status")) return;
-
+    const player = work.querySelector(".work-inline-player");
+    if (!player) return;
     activePlayer?.pause();
-    const workTitle = card.closest(".work-card").querySelector("h3").textContent;
-    card.hidden = true;
-
-    const status = document.createElement("p");
-    status.className = "work-video-status";
-    status.textContent = `${workTitle} 영상은 준비 중입니다.`;
-    status.setAttribute("role", "status");
-    work.insertBefore(status, card.nextElementSibling);
+    player.play().catch(() => {});
   });
 });
