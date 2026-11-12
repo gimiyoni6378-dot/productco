@@ -23,64 +23,45 @@ if (typingHeading && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-const dialog = document.getElementById("video-dialog");
-const dialogMedia = dialog.querySelector(".dialog-media");
-const dialogContent = dialog.querySelector(".dialog-content");
 let activePlayer = null;
-let dialogTrigger = null;
-const dialogTitle = document.getElementById("video-dialog-title");
 
-const resetDialog = () => {
-  if (activePlayer) {
-    activePlayer.pause();
-    activePlayer.removeAttribute("src");
-    activePlayer.load();
-    activePlayer.remove();
-    activePlayer = null;
-  }
-
-  dialogMedia.classList.remove("has-video");
-  dialogContent.hidden = false;
-};
-
-const closeDialog = () => {
-  resetDialog();
-  if (dialog.open) dialog.close();
+const mountWorkPlayer = (card) => {
+  const work = card.closest(".work-card");
+  const workTitle = work.querySelector("h3").textContent;
+  const player = document.createElement("video");
+  player.className = "work-inline-player";
+  player.controls = true;
+  player.playsInline = true;
+  player.preload = "metadata";
+  const thumbnail = card.querySelector("img");
+  player.poster = card.dataset.videoThumbnail || thumbnail?.currentSrc || thumbnail?.src || "";
+  player.src = card.dataset.video;
+  player.setAttribute("aria-label", `${workTitle} 영상 플레이어`);
+  player.addEventListener("play", () => {
+    if (activePlayer && activePlayer !== player) activePlayer.pause();
+    activePlayer = player;
+  });
+  card.hidden = true;
+  work.insertBefore(player, card.nextElementSibling);
+  return player;
 };
 
 document.querySelectorAll("[data-video]").forEach((card) => {
+  // When a video URL is supplied, expose the player in the page immediately.
+  if (card.dataset.video) mountWorkPlayer(card);
+
   card.addEventListener("click", () => {
-    resetDialog();
-    dialogTrigger = card;
+    const work = card.closest(".work-card");
+    if (work.querySelector(".work-inline-player, .work-video-status")) return;
+
+    activePlayer?.pause();
     const workTitle = card.closest(".work-card").querySelector("h3").textContent;
-    const videoUrl = card.dataset.video;
-    dialogTitle.textContent = videoUrl ? workTitle : `${workTitle} 영상을 준비하고 있습니다.`;
-    if (videoUrl) {
-      const player = document.createElement("video");
-      player.controls = true;
-      player.autoplay = true;
-      player.playsInline = true;
-      player.src = videoUrl;
-      player.setAttribute("aria-label", `${workTitle} 영상`);
-      dialogContent.hidden = true;
-      dialogMedia.classList.add("has-video");
-      dialogMedia.append(player);
-      activePlayer = player;
-    }
+    card.hidden = true;
 
-    dialog.showModal();
+    const status = document.createElement("p");
+    status.className = "work-video-status";
+    status.textContent = `${workTitle} 영상은 준비 중입니다.`;
+    status.setAttribute("role", "status");
+    work.insertBefore(status, card.nextElementSibling);
   });
-});
-
-dialog.querySelector(".dialog-close").addEventListener("click", closeDialog);
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) closeDialog();
-});
-dialog.addEventListener("cancel", (event) => {
-  event.preventDefault();
-  closeDialog();
-});
-dialog.addEventListener("close", () => {
-  resetDialog();
-  dialogTrigger?.focus({ preventScroll: true });
 });

@@ -118,6 +118,17 @@ button,a{-webkit-tap-highlight-color:transparent}
 .service-details{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 18px;align-content:start}
 .service-details li{font-size:11px;line-height:1.6;color:#817c72;padding-bottom:5px;border-bottom:1px solid rgba(23,23,22,.2);white-space:nowrap}
 
+/* Inline work playback replaces the former video modal. */
+.work-visual[hidden]{display:none}
+.work-inline-player,.work-video-status{display:block;width:100%;height:280px;margin:0;background:#080808;color:#f1eee7}
+.work-inline-player{object-fit:contain}
+.work-featured .work-inline-player,.work-featured .work-video-status{height:610px}
+.work-video-status{display:grid;place-items:center;padding:24px;text-align:center;font-size:13px;color:#c6c3bc}
+
+@media (max-width:700px){
+  .work-inline-player,.work-video-status,.work-featured .work-inline-player,.work-featured .work-video-status{height:auto;aspect-ratio:4/3}
+}
+
 .video-dialog{width:min(880px,calc(100% - 40px));max-height:calc(100svh - 40px);border:0;background:transparent;color:#f1eee7;padding:0;overflow:visible}
 .video-dialog::backdrop{background:rgba(10,10,9,.84);backdrop-filter:blur(9px)}
 .dialog-shell{background:#181817;border:1px solid #4d4942;box-shadow:0 28px 90px rgba(0,0,0,.45)}
