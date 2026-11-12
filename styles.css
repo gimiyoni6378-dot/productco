@@ -512,3 +512,19 @@ html:has(.inquiry-dialog[open]){overflow:hidden}
 html{background:#000}
 body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter));margin-inline:auto}
 @media(max-width:700px){:root{--page-gutter:0px}}
+@media(min-width:1025px){
+  :root{--content-inset:clamp(64px,6vw,96px);--column-gap:clamp(40px,4vw,60px)}
+  .site-header,.footer{padding-inline:var(--content-inset)}
+  .hero,.section-wrap,.process,.contact{padding-inline:var(--content-inset)}
+  .hero-caption{left:var(--content-inset)}
+  .hero-index{right:var(--content-inset)}
+  .intro-grid,.section-heading,.process-heading,.services-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--column-gap)}
+  .intro-grid{align-items:center}
+  .section-heading{display:grid;align-items:end;margin-bottom:42px}
+  .section-heading h2,.intro h2,.process h2,.services h2{line-height:1.25}
+  .section-note{justify-self:end;max-width:30ch;margin:0;font-size:15px;line-height:1.8}
+  .process-heading{margin-bottom:44px}
+  .services-head{align-items:center;margin-bottom:44px}
+  .process-lead,.services-lead{max-width:42ch;font-size:15px;line-height:1.8}
+  .step p{font-size:15px;line-height:1.8}
+}
