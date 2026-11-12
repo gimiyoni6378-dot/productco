@@ -79,7 +79,7 @@ form.addEventListener('submit', async event => {
   const data = new FormData(form);
   if (data.get('_gotcha')) { showError('요청을 처리하지 못했습니다. 페이지를 다시 열어 주세요.'); return; }
   data.set('subject', '[93seconds] 프로젝트 문의');
-  data.set('privacy_notice', `수집: 이름·이메일·제작 유형·문의 내용 / 목적: 프로젝트 상담 및 답변 / 보관: ${contactConfig.retentionPolicy} / 문의: ${contactConfig.privacyContact} / 처리: Formspree 저장 및 이메일 알림`);
+  data.set('privacy_notice', `수집: 이름·이메일·전화번호(선택)·제작 유형·문의 내용 / 목적: 프로젝트 상담 및 답변 / 보관: ${contactConfig.retentionPolicy} / 문의: ${contactConfig.privacyContact} / 처리: Formspree 저장 및 이메일 알림`);
   sending = true;
   fields.disabled = true;
   sendButton.disabled = true;
