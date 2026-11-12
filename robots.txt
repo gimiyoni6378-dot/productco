@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gimiyoni6378-dot.github.io/productco/sitemap.xml
