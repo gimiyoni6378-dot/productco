@@ -8,7 +8,7 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 - `styles.css`: 반응형 디자인과 타이핑 효과
 - `script.js`: 헤드 타이핑, 작품 카드 내 영상 재생
 - `contact.js` / `contact-config.js`: 문의 창과 Formspree 제출 연결
-- `analytics.js` / `analytics-consent.css`: GA4 동의, 유입·페이지·문의 이벤트
+- `analytics.js`: GA4 기본 페이지 조회와 유입 경로 측정
 - `assets/motion/`: 모션 효과
 
 ## 검색을 위한 HTML 구성
@@ -25,10 +25,9 @@ Google Search Console URL 접두어 속성은 등록되어 있으며 sitemap도 
 
 ## Google Analytics 4
 - 측정 ID: `G-ZY5622LZME`
-- 방문자가 분석을 허용한 경우에만 Analytics 태그가 로드됩니다. 거절한 경우에는 분석 요청과 쿠키를 만들지 않습니다.
-- GA4 자동 페이지 조회와 향상된 측정으로 페이지 조회, 유입 경로, 스크롤·외부 링크 클릭을 확인합니다. 추가 이벤트: `section_navigation`, `contact_form_open`, 문의 접수 성공 시 `generate_lead`, 접수 오류 시 `contact_form_error`.
-- 디버깅: URL 끝에 `?ga_debug=1`을 붙여 방문한 뒤 분석을 허용하면 DebugView에서 이벤트를 확인할 수 있습니다. 문의 성공 이벤트는 Formspree가 접수를 확인한 경우에만 전송되며, 문의 필드 값은 Analytics로 보내지 않습니다.
-- 개인정보처리방침의 Analytics 설명과 동의 문구를 운영 공개 전에 검토하세요.
+- GA4 기본 페이지 조회와 유입 경로·캠페인 정보를 측정합니다. 스크롤과 외부 링크 클릭은 GA4 향상된 측정 설정을 따릅니다. 문의 내용/개인정보를 GA에 보내지 않습니다.
+- 디버깅: URL 끝에 `?ga_debug=1`을 붙여 방문한 뒤 GA4 DebugView와 실시간 보고서에서 이벤트를 확인할 수 있습니다.
+- 개인정보처리방침에 Google Analytics의 수집 항목, 목적 및 처리 안내가 표시됩니다.
 
 ## 오픈 전 확인
 1. [문의 접수 연결 안내](docs/CONTACT_SETUP.md)를 따라 수신 이메일 인증·공개 개인정보 연락처·보관 기간 설정
