@@ -92,6 +92,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261112-inline-video">
+  <link rel="stylesheet" href="analytics-consent.css?v=20261113-ga4">
+  <script src="analytics.js?v=20261113-ga4" defer></script>
   <link rel="stylesheet" href="assets/motion/motion.css">
   <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 </head>
@@ -254,6 +256,20 @@
     <p>© <span id="year"></span> 93seconds. ALL RIGHTS RESERVED.</p>
     <a href="#top">BACK TO TOP ↑</a>
   </footer>
+
+  <aside class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-consent-title" aria-describedby="analytics-consent-copy" role="region" aria-label="분석 데이터 선택" hidden>
+    <p class="analytics-consent__eyebrow">93SECONDS · PRIVACY</p>
+    <h2 class="analytics-consent__title" id="analytics-consent-title">방문 분석을 허용할까요?</h2>
+    <p class="analytics-consent__copy" id="analytics-consent-copy">허용하면 페이지 조회와 유입 경로, 사이트 내 상호작용을 Google Analytics로 보내 사이트 이용 통계를 만듭니다. 선택은 언제든 바꿀 수 있습니다.</p>
+    <div class="analytics-consent__actions">
+      <a class="analytics-consent__policy" href="/privacy-policy/">개인정보 처리 안내</a>
+      <div class="analytics-consent__buttons">
+        <button class="analytics-consent__button analytics-consent__button--quiet" id="analytics-reject" type="button">필수 기능만 사용</button>
+        <button class="analytics-consent__button analytics-consent__button--allow" id="analytics-accept" type="button">분석 허용</button>
+      </div>
+    </div>
+  </aside>
+  <button class="analytics-settings" id="analytics-settings" type="button" aria-controls="analytics-consent" aria-expanded="false" hidden>분석 설정</button>
 
   <dialog class="inquiry-dialog" id="inquiry-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-description">
     <div class="inquiry-shell">
