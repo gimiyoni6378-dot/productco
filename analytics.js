@@ -63,6 +63,7 @@
     banner.hidden = true;
     settingsButton.hidden = false;
     settingsButton.setAttribute('aria-expanded', 'false');
+    settingsButton.focus();
     if (value === 'accepted') loadAnalytics();
   };
 
