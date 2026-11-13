@@ -551,7 +551,7 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 .program-preview-heading h2{font-size:clamp(28px,3vw,40px);font-weight:400;letter-spacing:-.05em;margin:0}
 .program-preview-heading>a{font-size:13px;border-bottom:1px solid #928776;padding:12px 0;line-height:1.7}
 .program-preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.program-preview-grid>a{display:block;border-top:1px solid #aaa397;padding-top:24px;min-width:0}
+.program-preview-grid>article{display:block;border-top:1px solid #aaa397;padding-top:24px;min-width:0}
 .program-preview-grid span{display:block;font-size:14px;margin-bottom:16px;color:#68563f}
 .program-preview-grid strong{display:block;font-size:clamp(16px,1.6vw,22px);font-weight:500;line-height:1.6;letter-spacing:-.04em}
 .program-preview-grid p,.program-preview-note{font-size:13px;line-height:1.9;color:#625e56}
@@ -559,3 +559,24 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 .program-preview-note{margin:30px 0 0;border-top:1px solid #c5c0b5;padding-top:20px}
 @media(max-width:760px){.pricing-nav{gap:14px}.pricing-nav-link{font-size:11px}.program-preview-heading{display:block}.program-preview-heading>a{display:inline-block;margin-top:14px}.program-preview-grid{grid-template-columns:1fr;gap:26px}.program-preview-grid strong{font-size:22px}.program-preview-grid span{margin-bottom:10px}.program-preview-grid p{margin-bottom:8px}}
 @media(max-width:400px){.site-header .wordmark{gap:6px;font-size:11px}.site-header .brand-mark{width:25px;height:25px}.pricing-nav{gap:10px}.site-header .project-cta.header-cta{font-size:10px;padding-inline:8px;gap:6px}.site-header .inquiry-icon{width:16px;height:16px}}
+
+/* Static product cards: details remain in the home page. */
+.program-preview-grid{align-items:start}
+.program-preview-grid>article{border:1px solid #b9b3a7;padding:clamp(20px,2.4vw,32px);cursor:default}
+.program-preview-grid h3{font-size:clamp(22px,2.1vw,28px);font-weight:500;letter-spacing:-.05em;margin:0 0 22px}
+.program-preview-grid .program-card-index{font:500 10px/1.6 "DM Sans",sans-serif;letter-spacing:.12em;color:#68563f;margin:0 0 22px}
+.program-preview-grid .program-pending{font-size:24px;font-weight:500;color:#171716;border-top:1px solid #b9b3a7;padding-top:24px}
+.program-preview-grid .actor-plan{border-top:1px solid #b9b3a7;padding:22px 0}
+.program-preview-grid h4{font-size:16px;font-weight:500;margin:0 0 12px}
+.program-preview-grid .actor-plan p{margin:10px 0 0}
+.program-preview-grid .actor-price{font-size:22px;color:#171716;font-weight:500}
+.program-preview-grid .actor-prices{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0}
+.program-preview-grid .actor-prices>div{display:flex;gap:8px;align-items:baseline}
+.program-preview-grid dt{font-size:12px;color:#625e56}
+.program-preview-grid dd{margin:0;white-space:nowrap}
+.program-preview-grid .actor-prices dd{font-size:20px;font-weight:500}
+.program-preview-grid .actor-discount{font-size:12px;color:#68563f}
+.program-preview-grid .actor-options{border-top:1px solid #b9b3a7;padding-top:22px}
+.program-preview-grid .actor-options dl{margin:0}
+.program-preview-grid .actor-options dl>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:7px 0;font-size:12px;line-height:1.8}
+.program-preview-grid .pricing-location{font-size:12px;margin:16px 0 0}

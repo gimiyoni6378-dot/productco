@@ -91,7 +91,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261113-pricing">
+  <link rel="stylesheet" href="styles.css?v=20261113-inline-programs">
   <script src="analytics.js?v=20261113-traffic" defer></script>
   <link rel="stylesheet" href="assets/motion/motion.css">
   <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
@@ -100,7 +100,7 @@
   <a class="skip-link" href="#main-content">본문 바로가기</a>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="93seconds 홈"><img class="brand-mark" src="assets/brand-mark-white.png" alt="" aria-hidden="true" width="32" height="32"><span><strong>93</strong>seconds</span></a>
-    <nav class="pricing-nav" aria-label="주요 메뉴"><a class="pricing-nav-link" href="/pricing/">프로그램·가격</a>
+    <nav class="pricing-nav" aria-label="주요 메뉴"><a class="pricing-nav-link" href="#programs">프로그램·가격</a>
     <a class="header-cta project-cta btn" href="#contact" data-inquiry-open aria-haspopup="dialog" aria-controls="inquiry-dialog">프로젝트 문의하기 <img class="inquiry-icon" src="assets/icons/project-inquiry.svg" alt="" width="24" height="24" aria-hidden="true"></a>
     </nav>
   </header>
@@ -179,11 +179,33 @@
 
     <section class="program-preview section-wrap" id="programs" aria-labelledby="programs-title">
       <p class="eyebrow dark">YEONGI DOGAM / PROGRAM &amp; PRICE</p>
-      <div class="program-preview-heading"><h2 id="programs-title">촬영 프로그램 안내</h2><a href="/pricing/">프로그램·가격 자세히 보기 <span aria-hidden="true">↗</span></a></div>
+      <div class="program-preview-heading"><h2 id="programs-title">촬영 프로그램 안내</h2></div>
       <div class="program-preview-grid">
-        <a href="/pricing/#actor-title"><span>01 / 배우 포트폴리오</span><strong>1인 독백 · 베이직 · 프리미엄</strong><p>1인 독백 8만 원<br>베이직 1인 10만 원 / 2인 20만 원<br>프리미엄 1인 20만 원 / 2인 35만 원</p><small>촬영 구성과 추가 옵션 자세히 보기 ↗</small></a>
-        <a href="/pricing/#brand-title"><span>02 / 브랜드 무드영상</span><strong>금액 미정</strong><p>브랜드의 분위기와 이미지를 담는 영상</p></a>
-        <a href="/pricing/#film-title"><span>03 / 단편영화 제작</span><strong>가격 미정</strong><p>하나의 이야기를 완성하는 단편영화</p></a>
+        <article aria-labelledby="actor-title"><p class="program-card-index">01 / ACTOR PORTFOLIO</p><h3 id="actor-title">배우 포트폴리오</h3>
+          <section class="actor-plan" aria-labelledby="monologue-title">
+            <h4 id="monologue-title">1인 독백</h4>
+            <p class="actor-price">8만 원</p>
+            <p>배우 한 명의 대사와 감정 흐름을 담는 독백 촬영</p>
+          </section>
+          <section class="actor-plan" aria-labelledby="basic-title">
+            <h4 id="basic-title">베이직</h4>
+            <dl class="actor-prices"><div><dt>1인</dt><dd>10만 원</dd></div><div><dt>2인</dt><dd>20만 원</dd></div></dl>
+            <p>약 3시간 촬영 · 기본 연출 · 2~3개 앵글</p>
+          </section>
+          <section class="actor-plan" aria-labelledby="premium-title">
+            <h4 id="premium-title">프리미엄</h4>
+            <dl class="actor-prices"><div><dt>1인</dt><dd>20만 원</dd></div><div><dt>2인</dt><dd>35만 원</dd></div></dl>
+            <p>약 4시간 촬영 · 사전 연출 미팅 및 맞춤 연출 · 5개 앵글 · 편집본 수정 1회</p>
+            <p class="actor-discount">※ 2인 가격은 5만 원 할인이 적용된 금액입니다.</p>
+          </section>
+          <section class="actor-options" aria-labelledby="options-title">
+            <h4 id="options-title">추가 옵션</h4>
+            <dl><div><dt>상대 배우 캐스팅</dt><dd>1명당 5만 원</dd></div><div><dt>대본 집필</dt><dd>1편당 3만 원</dd></div></dl>
+          </section>
+          <p class="pricing-location">※ 촬영 장소 대관료는 별도입니다.</p>
+        </article>
+        <article aria-labelledby="brand-title"><p class="program-card-index">02 / BRAND MOOD FILM</p><h3 id="brand-title">브랜드 무드영상</h3><p class="program-pending">금액 미정</p><p>브랜드의 분위기와 이미지를 담는 영상</p></article>
+        <article aria-labelledby="film-title"><p class="program-card-index">03 / SHORT FILM</p><h3 id="film-title">단편영화 제작</h3><p class="program-pending">가격 미정</p><p>하나의 이야기를 완성하는 단편영화</p></article>
       </div>
     </section>
 
