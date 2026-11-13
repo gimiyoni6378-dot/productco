@@ -17,7 +17,7 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 - 실제 HTML에 포함된 서비스 설명·FAQ 및 주요 영역으로 연결하는 탐색 링크
 - 순서가 있는 제작 과정 목록, 각 섹션과 제목의 명시적 연결
 
-홈페이지에 브랜드명, 사이트 URL, 로고, 공개 이메일을 담은 `Organization` JSON-LD를 추가했습니다.
+홈페이지에 브랜드명, 사이트 URL, 로고, 공개 이메일을 담은 `Organization` JSON-LD와 Google 검색결과의 사이트 이름을 지정하는 `WebSite` JSON-LD를 추가했습니다.
 Google Search Console URL 접두어 속성은 등록되어 있으며 sitemap도 제출된 상태입니다.
 검색엔진의 실제 색인이나 검색 순위는 이 코드만으로 확인하거나 보장할 수 없습니다.
 도메인을 변경하면 canonical과 Open Graph URL도 함께 갱신해야 합니다.
