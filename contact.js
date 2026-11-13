@@ -40,7 +40,10 @@ document.querySelectorAll('[data-inquiry-open]').forEach(button => {
   button.addEventListener('click', event => {
     event.preventDefault();
     trigger = button;
-    if (!inquiry.open) inquiry.showModal();
+    if (!inquiry.open) {
+      inquiry.showModal();
+      window.analyticsTrack?.('contact_form_open');
+    }
     (success.hidden ? heading : document.getElementById('inquiry-success-title')).focus({ preventScroll: true });
   });
 });
@@ -95,13 +98,22 @@ form.addEventListener('submit', async event => {
       signal: controller.signal, credentials: 'omit', redirect: 'error',
     });
     if (!response.ok) {
-      if (response.status === 429) showError('현재 문의 요청이 많습니다. 잠시 후 다시 시도해 주세요. 작성 내용은 유지됩니다.');
-      else if (response.status >= 500) showError('접수 결과를 확인하지 못했습니다. 작성 내용은 유지됩니다. 재전송하면 중복 접수될 수 있습니다.');
-      else showError('문의를 접수하지 못했습니다. 입력 내용을 확인한 뒤 다시 시도해 주세요. 작성 내용은 유지됩니다.');
+      if (response.status === 429) {
+        window.analyticsTrack?.('contact_form_error', { reason: 'rate_limited' });
+        showError('현재 문의 요청이 많습니다. 잠시 후 다시 시도해 주세요. 작성 내용은 유지됩니다.');
+      } else if (response.status >= 500) {
+        window.analyticsTrack?.('contact_form_error', { reason: 'server_error' });
+        showError('접수 결과를 확인하지 못했습니다. 작성 내용은 유지됩니다. 재전송하면 중복 접수될 수 있습니다.');
+      } else {
+        window.analyticsTrack?.('contact_form_error', { reason: 'request_rejected' });
+        showError('문의를 접수하지 못했습니다. 입력 내용을 확인한 뒤 다시 시도해 주세요. 작성 내용은 유지됩니다.');
+      }
       return;
     }
     // Only clear the draft after the service confirms acceptance.
     accepted = true;
+    // Record a lead only after Formspree confirms receipt; never send form values to Analytics.
+    window.analyticsTrack?.('generate_lead');
     form.reset();
     form.hidden = true;
     intro.hidden = true;
@@ -111,6 +123,7 @@ form.addEventListener('submit', async event => {
     inquiry.scrollTop = 0;
     if (inquiry.open) document.getElementById('inquiry-success-title').focus({ preventScroll: true });
   } catch {
+    window.analyticsTrack?.('contact_form_error', { reason: 'network_error' });
     showError('전송 결과를 확인하지 못했습니다. 인터넷 연결을 확인해 주세요. 작성 내용은 유지되며, 재전송하면 중복 접수될 수 있습니다.');
   } finally {
     clearTimeout(timeout);
