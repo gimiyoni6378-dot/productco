@@ -1,0 +1,26 @@
+.pricing-page .site-header{position:relative}
+.pricing-intro{margin-bottom:54px;max-width:760px}
+.pricing-intro h1{font-size:clamp(36px,4.7vw,64px);font-weight:400;line-height:1.35;letter-spacing:-.06em;margin:0 0 24px}
+.pricing-intro h1 em{font-style:normal;color:#927657}
+.pricing-intro>p:last-child{font-size:15px;line-height:1.9;color:#625e56}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.price-card{padding:32px clamp(20px,2.4vw,36px);border:1px solid #c9c5bb;display:flex;flex-direction:column;min-width:0;scroll-margin-top:28px}
+.plan-index{font:500 10px/1.6 'DM Sans',sans-serif;letter-spacing:.15em;color:#7a644b;margin:0 0 25px}
+.price-card h2{font-size:clamp(23px,2.2vw,29px);font-weight:500;letter-spacing:-.05em;margin:0 0 14px;scroll-margin-top:30px}
+.plan-description{font-size:13px;line-height:1.9;color:#666158;margin:0 0 24px}
+.actor-plan{border-top:1px solid #c9c5bb;padding:22px 0}
+.actor-plan h3,.actor-options h3{font-size:16px;font-weight:500;margin:0 0 12px;scroll-margin-top:28px}
+.actor-plan p{font-size:13px;line-height:1.9;color:#625e56;margin:10px 0 0}
+.actor-plan .actor-price{font-size:23px;font-weight:500;color:#171716;margin:0}
+.actor-prices{margin:0;display:flex;flex-wrap:wrap;gap:8px 20px}
+.actor-prices>div{display:flex;align-items:baseline;gap:8px}
+.actor-prices dt{font-size:12px;color:#625e56}.actor-prices dd{font-size:20px;font-weight:500;margin:0;white-space:nowrap}
+.actor-plan .actor-discount{font-size:12px;color:#7a644b}
+.actor-options{border-top:1px solid #c9c5bb;padding-top:22px}.actor-options dl{margin:0}.actor-options dl>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;padding:7px 0;font-size:12px;line-height:1.8}.actor-options dd{margin:0;white-space:nowrap}
+.pricing-location{font-size:12px;color:#625e56;line-height:1.8;margin:16px 0 24px}
+.price-pending{font-size:25px;font-weight:500;padding:24px 0;border-top:1px solid #c9c5bb;margin:0 0 24px}
+.plan-link{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;border-top:1px solid #aaa397;padding-top:18px;font-size:13px}.plan-link span{color:#927657}
+.pricing-page a:focus-visible{outline:2px solid #927657;outline-offset:5px}
+@media(min-width:1600px){.pricing-section{max-width:1480px;margin:auto}}
+@media(min-width:761px) and (max-width:1000px){.pricing-grid{gap:12px}.price-card{padding:24px 18px}}
+@media(max-width:760px){.pricing-grid{grid-template-columns:minmax(0,1fr);gap:20px}.pricing-intro{margin-bottom:32px}.pricing-intro>p:last-child{font-size:13px}.price-card{padding:28px 24px}.price-card h2{font-size:27px}.plan-index{margin-bottom:18px}}
