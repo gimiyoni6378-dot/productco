@@ -6,7 +6,7 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 ## 구성
 - `index.html`: 브랜드 소개, 작품, 제작 과정, 서비스, FAQ, 문의
 - `styles.css`: 반응형 디자인과 타이핑 효과
-- `script.js`: 헤드 타이핑, 영상 모달
+- `script.js`: 헤드 타이핑, 작품 카드 내 영상 재생
 - `contact.js` / `contact-config.js`: 문의 창과 Formspree 제출 연결
 - `assets/motion/`: 모션 효과
 
@@ -17,7 +17,8 @@ HTML, CSS, JavaScript로 구성하며 `main` 변경 시 GitHub Pages로 배포�
 - 실제 HTML에 포함된 서비스 설명·FAQ 및 주요 영역으로 연결하는 탐색 링크
 - 순서가 있는 제작 과정 목록, 각 섹션과 제목의 명시적 연결
 
-구조화 데이터(JSON-LD), Search Console 등록 및 사이트맵 제출은 이후 작업입니다.
+홈페이지에 브랜드명, 사이트 URL, 로고, 공개 이메일을 담은 `Organization` JSON-LD를 추가했습니다.
+Google Search Console URL 접두어 속성은 등록되어 있으며 sitemap도 제출된 상태입니다.
 검색엔진의 실제 색인이나 검색 순위는 이 코드만으로 확인하거나 보장할 수 없습니다.
 도메인을 변경하면 canonical과 Open Graph URL도 함께 갱신해야 합니다.
 
