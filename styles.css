@@ -336,7 +336,7 @@ html:has(.video-dialog[open]){overflow:hidden}
 
 /* Inquiry icon and larger closing call to action. */
 .project-cta .inquiry-icon{width:24px;height:24px;flex:none;object-fit:contain}
-.project-cta.contact-link{min-height:68px;padding:18px 34px;gap:22px;font-size:22px;font-weight:700}
+.project-cta.contact-link{min-height:68px;padding:18px 34px;gap:22px;font-size:20px;font-weight:700}
 .project-cta.contact-link .inquiry-icon{width:30px;height:30px}
 @media(max-width:700px){
   .project-cta.header-cta{gap:10px;padding-inline:12px}
