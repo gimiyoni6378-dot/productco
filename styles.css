@@ -544,7 +544,8 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 
 /* Program navigation and responsive pricing preview */
 .pricing-nav{display:flex;align-items:center;gap:clamp(16px,2.5vw,36px)}
-.pricing-nav-link{font-size:13px;line-height:1.5;padding:14px 0;color:#e9e5dc;white-space:nowrap}
+.pricing-nav-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #d2bea0;border-radius:4px;background:#e0cfb5;color:#171716;font-size:13px;font-weight:600;line-height:1.5;white-space:nowrap;transition:background-color .2s ease,border-color .2s ease}
+.pricing-nav-link:hover{background:#eadcc6;border-color:#dec9a9}
 .pricing-nav-link:focus-visible,.program-preview a:focus-visible{outline:2px solid #b9a58a;outline-offset:5px}
 .program-preview{background:#e5e3dc}
 .program-preview-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:22px}
