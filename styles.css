@@ -605,3 +605,11 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 .work-grid .work-meta p{font-size:13px;line-height:1.8;color:#5c574f}
 .work-grid .work-meta>span{color:#85683f}
 @media(max-width:700px){.work-grid{grid-template-columns:minmax(0,1fr);gap:18px}.work-grid>.work-card{border-radius:22px}.work-grid .work-visual{aspect-ratio:4/3;padding:16px}.work-grid .work-meta{padding:17px 18px 20px}.work-grid .work-meta h3{font-size:16px}.work-grid .work-meta p{font-size:12px}}
+
+/* Match the two header actions in type size and button height. */
+.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{min-height:44px;padding:10px 14px;font:600 13px/1.5 "Noto Sans KR",sans-serif;letter-spacing:0}
+.site-header .pricing-nav .project-cta.header-cta{gap:8px}
+.site-header .pricing-nav .project-cta .inquiry-icon{width:18px;height:18px}
+.program-preview-grid .program-pending{color:#85683f}
+@media(max-width:760px){.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{min-height:44px;padding:8px 12px;font-size:11px}.site-header .pricing-nav .project-cta.header-cta{gap:6px}.site-header .pricing-nav .project-cta .inquiry-icon{width:16px;height:16px}}
+@media(max-width:400px){.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{padding:7px 8px;font-size:10px}.site-header .pricing-nav .project-cta.header-cta{gap:4px}.site-header .pricing-nav .project-cta .inquiry-icon{width:14px;height:14px}}
