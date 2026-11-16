@@ -755,3 +755,7 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 @media(max-width:480px){
   .site-header .wordmark{transform:translate(8px,3px)}
 }
+
+/* Increase mobile brand name size while preserving the single-row header. */
+@media(max-width:480px){.site-header .wordmark{font-size:17px}}
+@media(max-width:360px){.site-header .wordmark{font-size:14px}}
