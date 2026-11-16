@@ -108,6 +108,8 @@ form.addEventListener('submit', async event => {
     }
     // Only clear the draft after the service confirms acceptance.
     accepted = true;
+    // Emit only after Formspree confirms acceptance. Never attach form values.
+    document.dispatchEvent(new Event('seconds:inquiry-accepted'));
     form.reset();
     form.hidden = true;
     intro.hidden = true;
