@@ -694,3 +694,9 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
   .site-header .pricing-nav .project-cta.header-cta{gap:2px}
   .site-header .pricing-nav .project-cta .inquiry-icon{width:11px;height:11px}
 }
+
+/* Restore the brand lockup to its original scale on mobile. */
+@media(max-width:480px){
+  .site-header .wordmark{gap:11px;font-size:13px;letter-spacing:.13em}
+  .site-header .brand-mark{width:32px;height:32px}
+}
