@@ -648,3 +648,49 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
   .site-header .pricing-nav .project-cta.header-cta{gap:6px}
   .site-header .pricing-nav .project-cta .inquiry-icon{width:16px;height:16px}
 }
+
+/* Keep the mobile brand and both actions on one line. */
+@media(max-width:480px){
+  .site-header{
+    height:66px;
+    min-height:66px;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    gap:6px;
+    padding:0 8px;
+  }
+  .site-header .wordmark{
+    flex:0 0 auto;
+    gap:4px;
+    font-size:11px;
+    letter-spacing:.08em;
+    white-space:nowrap;
+  }
+  .site-header .brand-mark{width:20px;height:20px}
+  .site-header .pricing-nav{
+    width:auto;
+    flex:0 0 auto;
+    gap:4px;
+  }
+  .site-header .pricing-nav .pricing-nav-link,
+  .site-header .pricing-nav .project-cta.header-cta{
+    min-height:36px;
+    padding:5px 7px;
+    font-size:9px;
+    line-height:1.25;
+    white-space:nowrap;
+  }
+  .site-header .pricing-nav .project-cta.header-cta{gap:3px}
+  .site-header .pricing-nav .project-cta .inquiry-icon{width:12px;height:12px}
+}
+@media(max-width:360px){
+  .site-header{gap:4px;padding-inline:7px}
+  .site-header .wordmark{gap:3px;font-size:10px;letter-spacing:.06em}
+  .site-header .brand-mark{width:18px;height:18px}
+  .site-header .pricing-nav{gap:3px}
+  .site-header .pricing-nav .pricing-nav-link,
+  .site-header .pricing-nav .project-cta.header-cta{padding-inline:5px;font-size:8px}
+  .site-header .pricing-nav .project-cta.header-cta{gap:2px}
+  .site-header .pricing-nav .project-cta .inquiry-icon{width:11px;height:11px}
+}
