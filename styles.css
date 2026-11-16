@@ -613,3 +613,5 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 .program-preview-grid .program-pending{color:#85683f}
 @media(max-width:760px){.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{min-height:44px;padding:8px 12px;font-size:11px}.site-header .pricing-nav .project-cta.header-cta{gap:6px}.site-header .pricing-nav .project-cta .inquiry-icon{width:16px;height:16px}}
 @media(max-width:400px){.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{padding:7px 8px;font-size:10px}.site-header .pricing-nav .project-cta.header-cta{gap:4px}.site-header .pricing-nav .project-cta .inquiry-icon{width:14px;height:14px}}
+
+.work-grid button.work-visual{cursor:pointer}

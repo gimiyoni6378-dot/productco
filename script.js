@@ -47,14 +47,11 @@ const mountWorkPlayer = (card) => {
 };
 
 document.querySelectorAll("[data-video]").forEach((card) => {
-  // When a video URL is supplied, expose the player in the page immediately.
-  if (card.dataset.video) mountWorkPlayer(card);
-
   card.addEventListener("click", () => {
     if (!card.dataset.video) return;
     const work = card.closest(".work-card");
-    const player = work.querySelector(".work-inline-player");
-    if (!player) return;
+    let player = work.querySelector(".work-inline-player");
+    if (!player) player = mountWorkPlayer(card);
     activePlayer?.pause();
     player.play().catch(() => {});
   });
