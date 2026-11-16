@@ -615,3 +615,36 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 @media(max-width:400px){.site-header .pricing-nav .pricing-nav-link,.site-header .pricing-nav .project-cta.header-cta{padding:7px 8px;font-size:10px}.site-header .pricing-nav .project-cta.header-cta{gap:4px}.site-header .pricing-nav .project-cta .inquiry-icon{width:14px;height:14px}}
 
 .work-grid button.work-visual{cursor:pointer}
+
+/* Narrow mobile header: keep the brand on its own row and actions aligned below. */
+@media(max-width:480px){
+  .site-header{
+    height:auto;
+    min-height:100px;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    gap:9px;
+    padding:10px 6vw 12px;
+  }
+  .site-header .wordmark{
+    align-self:flex-start;
+    gap:8px;
+    font-size:14px;
+    white-space:nowrap;
+  }
+  .site-header .brand-mark{width:28px;height:28px}
+  .site-header .pricing-nav{
+    width:100%;
+    justify-content:flex-end;
+    gap:8px;
+  }
+  .site-header .pricing-nav .pricing-nav-link,
+  .site-header .pricing-nav .project-cta.header-cta{
+    min-height:40px;
+    padding:7px 11px;
+    font-size:11px;
+  }
+  .site-header .pricing-nav .project-cta.header-cta{gap:6px}
+  .site-header .pricing-nav .project-cta .inquiry-icon{width:16px;height:16px}
+}
