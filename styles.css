@@ -759,3 +759,11 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 /* Increase mobile brand name size while preserving the single-row header. */
 @media(max-width:480px){.site-header .wordmark{font-size:17px}}
 @media(max-width:360px){.site-header .wordmark{font-size:14px}}
+
+/* Keep the play glyph visible over dark thumbnail imagery. */
+.work-grid .work-visual .play-button{
+  color:#fff;
+  background:rgba(12,12,11,.82);
+  font-size:14px;
+  line-height:1;
+}
