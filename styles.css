@@ -742,3 +742,11 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
   .site-header .pricing-nav .project-cta.header-cta{gap:2px}
   .site-header .pricing-nav .project-cta .inquiry-icon{width:11px;height:11px}
 }
+
+/* Match desktop inline video height to the 16:10 work thumbnail frame. */
+@media(min-width:701px){
+  .work-grid .work-inline-player{
+    height:auto;
+    aspect-ratio:16/10;
+  }
+}
