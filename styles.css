@@ -567,6 +567,10 @@ body{position:relative;width:calc(100% - var(--page-gutter) - var(--page-gutter)
 .program-preview-grid>article{min-width:0;border:0;border-radius:24px;background:#fbf9f5;padding:clamp(22px,2.4vw,36px);box-shadow:0 9px 20px rgba(48,40,27,.09);cursor:default}
 .program-preview-grid h3{font-size:clamp(22px,2.1vw,28px);font-weight:600;letter-spacing:-.05em;margin:0 0 24px;line-height:1.4}
 .program-preview-grid .program-card-index{font:600 10px/1.6 "DM Sans",sans-serif;letter-spacing:.1em;color:#85683f;margin:0 0 18px}
+.program-preview-grid .program-detail{border-top:1px solid #e5ded2;padding:14px 0 2px}
+.program-preview-grid .program-detail h4{font-size:16px;font-weight:600;line-height:1.5;margin:0 0 5px;color:#302a22}
+.program-preview-grid .program-detail p{margin:0 0 8px}
+.program-preview-grid .program-price-note{font-size:11px;line-height:1.7;color:#777067;margin-top:-8px}
 .program-preview-grid p{font-size:13px;line-height:1.75;color:#5c574f}
 .program-preview-grid .program-icon{display:block;width:88px;height:88px;margin:40px auto 36px;opacity:.8;filter:invert(57%) sepia(26%) saturate(572%) hue-rotate(356deg) brightness(94%) contrast(88%)}
 .program-preview-grid .program-pending{font-size:25px;font-weight:600;color:#171716;border-top:1px solid #d7cec0;padding-top:20px;margin:0 0 18px;line-height:1.4}
