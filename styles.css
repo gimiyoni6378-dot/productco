@@ -201,6 +201,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 .hero-copy span,.intro-text p span{display:block}
 .hero-copy span+span{margin-top:2px}
 .hero-copy .hero-brand-break{display:none}
+.hero-copy .hero-keyword-break{display:initial}
 .intro-text p span+span{margin-top:3px}
 .visual-four:before{background-image:linear-gradient(0deg,rgba(0,0,0,.4),transparent),url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1100&q=85")}
 
