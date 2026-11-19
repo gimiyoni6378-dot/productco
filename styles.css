@@ -410,6 +410,7 @@ p{word-break:keep-all;overflow-wrap:normal;text-wrap:pretty}
 .studio-heading .eyebrow{margin-bottom:18px}
 .studio-heading h2{font-size:clamp(34px,5vw,62px);line-height:1.35;font-weight:400;letter-spacing:-.065em;margin:0 0 16px;color:#211f1b}
 .studio-heading h2 em{font-style:normal;color:#8b7152}
+.studio-heading h2 .studio-title-break{display:initial}
 .studio-heading>p:last-child{font-size:14px;line-height:1.95;color:#625d54;margin:0}
 .studio-heading-break{display:none}
 .studio-proof{margin-top:0;border-top:0;padding-top:0}
